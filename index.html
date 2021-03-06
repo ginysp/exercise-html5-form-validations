@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <title>Form</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h3>Payment form example</h3>
+        </div>
+
+        <div id="mensajeerror" class="alert alert-danger" role="alert">
+            Some fields are missing
+        </div>
+        <form id="PagoForm">
+            <div class="row">
+                <div class="col-6">
+                    <p>Card #</p>
+                    <input id="tj" type="text" class="form-control" placeholder="XXXXXXXXXXXXXXXX">
+                </div>
+                <div class="col-3">
+                    <p>CVC #</p>
+                    <input id="cvc" type="text" class="form-control" placeholder="0000">
+                </div>
+                <div class="col-3">
+                    <p>Amount</p>
+                    <input id="amount" type="text" class="form-control" placeholder="$ Amount">
+                </div>
+            </div>
+            <div class="row">
+                  <div class="col-6">
+                    <p>First Name</p>
+                    <input id="name" type="text" class="form-control" >
+                </div>
+                <div class="col-6">
+                    <p>Last Name</p>
+                    <input id="lastname" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>City</p>
+                    <input id="city" type="text" class="form-control">
+                </div>
+                <div class="col-3">
+                    <p>State</p>
+                    <select id="state" class="custom-select" id="inlineFormCustomSelect">
+                        <option selected>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <p>Postal Code</p>
+                    <input id="postalcode" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>We accept:</p>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="mastercard" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            <i class="fab fa-cc-mastercard"></i>
+                        </label>
+                       
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="visa" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            <i class="fab fa-cc-visa"></i>
+                        </label>
+                        
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="diners" value="option3" checked>
+                        <label class="form-check-label" for="exampleRadios3">
+                            <i class="fab fa-cc-diners-club"></i>
+                        </label>
+                       
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="amex" value="option4">
+                        <label class="form-check-label" for="exampleRadios4">
+                            <i class="fab fa-cc-amex"></i>
+                        </label>
+                </div>
+                <div class="col-6">
+                    <p>Message</p>
+                    <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                    <p>Add any notes here.</p>
+                </div>
+             </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-secondary">Cancel</button>
+                <button id="Enviar" type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
